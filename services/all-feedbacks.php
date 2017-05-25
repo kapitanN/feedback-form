@@ -46,7 +46,7 @@ $getMessagesStatement->setFetchMode(PDO::FETCH_CLASS, 'Message');
 </head>
 <body>
 <div style="margin: 10px">
-    <form action="../index.html" method="post" id = "goHomeForm">
+    <form action="../index.php" method="post" id = "goHomeForm">
         <button type="submit" class="btn btn-success" style="margin-top: 10px">Home page</button>
     </form><br/>
     <form name = 'sort-form' action="all-feedbacks.php" method="post">
