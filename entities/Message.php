@@ -3,8 +3,13 @@
 class Message
 {
     private $id;
-    private $text;
-    private $pubdate;
+    private $name;
+    private $email;
+    private $homepage;
+    private $message;
+    private $publicationDate;
+    private $userIp;
+    private $browser;
 
     public function getId(){
         return $this->id;
@@ -14,20 +19,60 @@ class Message
         $this->id = $id;
     }
 
-    public function getText(){
-        return $this->text;
+    public function getName(){
+        return $this->name;
     }
 
-    public function setText($text){
-        $this->text = $text;
+    public function setName($name){
+        $this->name = $name;
     }
 
-    public function getPubdate(){
+    public function getEmail(){
+        return $this->email;
+    }
+
+    public function setEmail($email){
+        $this->email = $email;
+    }
+
+    public function getHomepage(){
+        return $this->homepage;
+    }
+
+    public function setHomepage($homepage){
+        $this->homepage = $homepage;
+    }
+
+    public function getMessage(){
+        return $this->message;
+    }
+
+    public function setMessage($message){
+        $this->message = $message;
+    }
+
+    public function getPublicationDate(){
         return $this->pubdate;
     }
 
-    public function setPubdate($pubdate){
-        $this->pubdate = $pubdate;
+    public function setPublicationDate($publicationDate){
+        $this->publicationDate = $publicationDate;
+    }
+
+    public function getUserIp(){
+        return $this->userIp;
+    }
+
+    public function setUserIp($userIp){
+        $this->userIp = $userIp;
+    }
+
+    public function getBrowser(){
+        return $this->browser;
+    }
+
+    public function setBrowser($browser){
+        $this->browser = $browser;
     }
 
 }
