@@ -6,7 +6,7 @@ if (md5($_POST['captcha']) == $_SESSION['randomnr2'])	{
     $name = $_POST['name'];
     $email = $_POST['email'];
     $homepage = $_POST['homepage'];
-    $userIp = $_SERVER['REMOTE_ADDR'];
+    $userIp = ip2long($_SERVER['REMOTE_ADDR']);
     $browser = $_SERVER['HTTP_USER_AGENT'];
     $message = $_POST['message'];
     $publicationDate = date("Y-m-d H:i:s");

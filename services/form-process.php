@@ -1,5 +1,6 @@
 <?php
 include_once "add-data.php";
+include_once "../configs/config.php";
 
 $errorMSG = "";
 
@@ -25,7 +26,6 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "nikita.shapovalov.94@test.com";
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -41,7 +41,7 @@ $Body .= $message;
 $Body .= "\n";
 
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail(EMAIL, $Subject, $Body, "From:".$email);
 
 // redirect to success page
 if ($success && $errorMSG == ""){
